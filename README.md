@@ -67,10 +67,12 @@ This repository contains a social network API built using Express.js, MongoDB, a
 ## Reactions
  - **POST /api/thoughts/:thoughtId/reactions:** Create a reaction for a thought.
    ```json
-   {
-  "reactionBody": "Interesting!",
-  "username": "your_username"
-}
+    {
+   "reactionBody": "Interesting!",
+   "username": "your_username"
+    }
+
+     
 
 - **DELETE /api/thoughts/:thoughtId/reactions/:reactionId:** Remove a reaction by reaction ID.
 ## Walkthrough Video
