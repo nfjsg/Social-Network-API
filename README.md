@@ -27,42 +27,52 @@ This repository contains a social network API built using Express.js, MongoDB, a
 5. Open your browser and go to [http://localhost:3001](http://localhost:3001).
 
 
+# API Routes
 
-## API Routes
+## Users
 
-Users
--GET /api/users: Get all users.
-GET /api/users/:id: Get a single user by ID with populated thought and friend data.
-POST /api/users: Create a new user.
-{
-  "username": "your_username",
-  "email": "your_email@example.com"
-}
-PUT /api/users/:id: Update a user by ID.
-DELETE /api/users/:id: Remove a user by ID.
+- **GET /api/users:** Get all users.
+- **GET /api/users/:id:** Get a single user by ID with populated thought and friend data.
+- **POST /api/users:** Create a new user.
 
-Friends
-POST /api/users/:userId/friends/:friendId: Add a new friend to a user's friend list.
-DELETE /api/users/:userId/friends/:friendId: Remove a friend from a user's friend list.
-Thoughts
-GET /api/thoughts: Get all thoughts.
-GET /api/thoughts/:id: Get a single thought by ID.
-POST /api/thoughts: Create a new thought.
-{
+  ```json
+  {
+    "username": "your_username",
+    "email": "your_email@example.com"
+  }
+
+- **PUT /api/users/:id:** Update a user by ID.
+- **DELETE /api/users/:id:** Remove a user by ID.
+
+
+## Friends 
+- **POST /api/users/:userId/friends/:friendId:** Add a new friend to a user's friend list.
+- **DELETE /api/users/:userId/friends/:friendId:** Remove a friend from a user's friend list.
+
+## Thoughts
+- **GET /api/thoughts:** Get all thoughts.
+- **GET /api/thoughts/:id:** Get a single thought by ID.
+- **POST /api/thoughts:** Create a new thought.
+
+     ```json
+     {
   "thoughtText": "Here's a cool thought...",
   "username": "your_username",
   "userId": "user_id_assigned_by_mongoose"
 }
-PUT /api/thoughts/:id: Update a thought by ID.
-DELETE /api/thoughts/:id: Remove a thought by ID.
-Reactions
-POST /api/thoughts/:thoughtId/reactions: Create a reaction for a thought.
-{
+- **PUT /api/thoughts/:id:** Update a thought by ID.
+- **DELETE /api/thoughts/:id:** Remove a thought by ID.
+
+
+## Reactions
+ - **POST /api/thoughts/:thoughtId/reactions:** Create a reaction for a thought.
+   ```json
+   {
   "reactionBody": "Interesting!",
   "username": "your_username"
 }
-DELETE /api/thoughts/:thoughtId/reactions/:reactionId: Remove a reaction by reaction ID.
 
+- **DELETE /api/thoughts/:thoughtId/reactions/:reactionId:** Remove a reaction by reaction ID.
 ## Walkthrough Video
 
 [Link to the Walkthrough Video](your_walkthrough_video_link)
