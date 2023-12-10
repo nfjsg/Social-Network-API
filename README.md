@@ -59,7 +59,7 @@ This repository contains a social network API built using Express.js, MongoDB, a
   "thoughtText": "Here's a cool thought...",
   "username": "your_username",
   "userId": "user_id_assigned_by_mongoose"
-}
+     }
 - **PUT /api/thoughts/:id:** Update a thought by ID.
 - **DELETE /api/thoughts/:id:** Remove a thought by ID.
 
